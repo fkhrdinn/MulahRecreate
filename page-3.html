@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="center container">
+        <div class="heading center">
+            MULAH
+        </div>
+        <div class="sub-heading">
+            <div>Profile</div>
+        </div>
+
+        <div class="form-group">
+            <div for="name">Name:</div>
+            <input readonly class="select" type="text" id="name" name="name">
+        </div>
+
+        <div class="form-group">
+            <div for="mobile">Mobile Number:</div>
+            <input readonly class="select" type="text" id="mobile" name="mobile">
+        </div>
+
+        <div class="form-group">
+            <div>Birthday:</div>
+            <input readonly class="select" type="text" id="birthday" name="birthday">
+        </div>
+
+        <div class="form-group">
+            <div for="email">Email:</div>
+            <input readonly class="select" type="email" id="email" name="email">
+        </div>
+
+        <hr>
+    </div>
+    <div class="footer">
+        Powered by <a class="blue" href="MulahRewards.com">MulahRewards.com</a>
+    </div>
+    <script>
+        // Retrieve values from sessionStorage and display them
+        document.getElementById('mobile').value = sessionStorage.getItem('mobileNumber');
+        document.getElementById('name').value = sessionStorage.getItem('capturedName');
+        document.getElementById('birthday').value = sessionStorage.getItem('capturedBirthday');
+        document.getElementById('email').value = sessionStorage.getItem('capturedEmail');
+    </script>
+</body>
+
+</html>
